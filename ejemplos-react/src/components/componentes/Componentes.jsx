@@ -2,7 +2,7 @@ const styles = {
   h2: {
     color: 'red',
     backgroundColor: 'gray'
-  }
+  },
 }
 
 const Componentes = (props) => {
