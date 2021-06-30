@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 const CODIGO_SECRETO = '6712';
 
 const CodigoSecreto = () => {
@@ -27,6 +27,12 @@ const CodigoSecreto = () => {
         break;
     }
   }
+
+  // useEffect(() => {
+  //   if (CODIGO_SECRETO === Codigo) {
+  //       setCodigo('CODE OK')
+  //     }
+  // }, [codigo])
 
   const listaBotones = new Array(10).fill(null).map((val, i) => <button type="button" key={i}>{i}</button>)
 

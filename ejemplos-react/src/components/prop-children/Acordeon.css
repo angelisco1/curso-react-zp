@@ -1,0 +1,19 @@
+.acordeon {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.acordeon-heading {
+  text-align: center;
+  border-bottom: 2px solid black;
+  cursor: pointer;
+}
+.acordeon-content {
+  overflow: hidden;
+}
+.acordeon-content.cerrado {
+  height: 0;
+}
+.acordeon-content.abierto {
+  height: auto;
+  padding: 20px;
+}
