@@ -7,6 +7,9 @@ import Formulario from './formularios/Formulario';
 import UseEffect from './useeffect/UseEffect';
 import PropChildren from './prop-children/PropChildren';
 import Referencias from './referencias/Referencias';
+import Suspense from './suspense/Suspense'
+import ContextApi from './ContextApi/ContextApi';
+import OtrosHooks from './otros-hooks/OtrosHooks';
 
 const App = () => {
   return (
@@ -19,7 +22,10 @@ const App = () => {
       {/* <Formulario /> */}
       {/* <UseEffect /> */}
       {/* <PropChildren /> */}
-      <Referencias />
+      {/* <Referencias /> */}
+      {/* <Suspense /> */}
+      {/* <ContextApi /> */}
+      <OtrosHooks />
     </div>
   )
 }
