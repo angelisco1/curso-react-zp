@@ -1,0 +1,3 @@
+export const INIT_VENDEHUMOS = 'INIT_VENDEHUMOS'
+export const CREAR_VENDEHUMOS = 'CREAR_VENDEHUMOS'
+export const VOTAR = 'VOTAR'

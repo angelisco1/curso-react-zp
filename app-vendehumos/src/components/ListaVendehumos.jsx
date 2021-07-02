@@ -1,10 +1,15 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const ListaVendehumos = () => {
-  const [vendehumos, setVendehumos] = useState([
-    { id: 106, nombre: 'Vendehumos 1', tema: 'Crypto' }
-  ])
+  // const [vendehumos, setVendehumos] = useState([
+  //   { id: 106, nombre: 'Vendehumos 1', tema: 'Crypto' }
+  // ])
+  const vendehumos = useSelector(state => {
+    // console.log(state)
+    return state.vendehumos.vendehumos
+  })
 
   return (
     <div>
