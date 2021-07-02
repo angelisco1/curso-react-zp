@@ -10,6 +10,7 @@ import Referencias from './referencias/Referencias';
 import Suspense from './suspense/Suspense'
 import ContextApi from './ContextApi/ContextApi';
 import OtrosHooks from './otros-hooks/OtrosHooks';
+import Hoc from './hoc/Hoc';
 
 const App = () => {
   return (
@@ -25,7 +26,8 @@ const App = () => {
       {/* <Referencias /> */}
       {/* <Suspense /> */}
       {/* <ContextApi /> */}
-      <OtrosHooks />
+      {/* <OtrosHooks /> */}
+      <Hoc />
     </div>
   )
 }

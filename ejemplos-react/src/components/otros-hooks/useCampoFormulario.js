@@ -1,21 +1,16 @@
 import { useEffect, useState } from 'react'
 
-export const useCampoFormulario = (valorInicial = '') => {
+export const useCampoFormulario = (valorInicial = '', validaciones = []) => {
   const [valor, setValor] = useState(valorInicial)
   const [errores, setErrores] = useState([])
 
-  // TODO: mejorar con array de regexps
   useEffect(() => {
-    const error = 'Tiene que tener más de 2 letras'
-    if (valor.length < 3) {
-      if (!errores.includes(error)) {
-        const nuevosErrores = [...errores, error]
-        setErrores(nuevosErrores)
-      }
-    } else {
-      const nuevosErrores = errores.filter(e => e !== error)
-      setErrores(nuevosErrores)
-    }
+    const nuevosErrores = validaciones.filter(v => {
+      const rexp = new RegExp(v.reg)
+      return !rexp.test(valor)
+    })
+    console.log(nuevosErrores)
+    setErrores(nuevosErrores)
   }, [valor])
 
   const handleChange = (event) => setValor(event.target.value)
