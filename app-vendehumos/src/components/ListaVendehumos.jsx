@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import Vendehumos from './Vendehumos';
 
 const ListaVendehumos = () => {
   // const [vendehumos, setVendehumos] = useState([
@@ -14,9 +14,9 @@ const ListaVendehumos = () => {
   return (
     <div>
       <h2>Vota a los vendehumos</h2>
-      <ul>
-        {vendehumos.map(vh => <Link key={vh.id} to={'/vendehumos/' + vh.id}>{vh.nombre}</Link>)}
-      </ul>
+      <div>
+        {vendehumos.map(vh => <Vendehumos key={vh.id} {...vh} />)}
+      </div>
     </div>
   )
 }
